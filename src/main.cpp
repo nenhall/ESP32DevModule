@@ -2,10 +2,14 @@
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
-#include "OLEDDisplay.hpp"
+#include "OLEDU8g2.hpp"
 #include "LED.hpp"
-// #include "WifiManager.hpp"
+#include "WifiManager.hpp"
 #include "BLE.hpp"
+
+OLEDU8g2 oled;
+
+extern int isConnected;
 
 void setup()
 {
@@ -15,14 +19,17 @@ void setup()
   Serial.begin(115200);
   delay(10);
 
-  // 连接 Wifi
-  // WifiManager().connectWifi();
+  oled.setup();
 
   // 开启蓝牙
-  BLE::setup();
+  // BLE::setup();
+
+  // 连接 Wifi
+  WifiManager().connectWifi();
 }
 
 void loop()
 {
   LED::loop();
+  oled.loop();
 }
