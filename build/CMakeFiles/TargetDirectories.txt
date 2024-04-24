@@ -1,0 +1,3 @@
+/Users/meitu/Studio/Codespaces/ESP32DevModule/build/CMakeFiles/ESP32DevModule.dir
+/Users/meitu/Studio/Codespaces/ESP32DevModule/build/CMakeFiles/edit_cache.dir
+/Users/meitu/Studio/Codespaces/ESP32DevModule/build/CMakeFiles/rebuild_cache.dir
